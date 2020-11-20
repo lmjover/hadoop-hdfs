@@ -40,8 +40,8 @@ public class MyHDFSSequenceFileWriter implements MyWriter {
 				SequenceFile.Writer.file(path),
 				SequenceFile.Writer.keyClass(Text.class),
 				SequenceFile.Writer.valueClass(Text.class),
-				SequenceFile.Writer.compression(CompressionType.NONE)
-//				SequenceFile.Writer.compression(CompressionType.RECORD)
+//				SequenceFile.Writer.compression(CompressionType.NONE)
+				SequenceFile.Writer.compression(CompressionType.RECORD)
 //				SequenceFile.Writer.compression(CompressionType.BLOCK)
 		};
 		this.writer = SequenceFile.createWriter(this.config, options);
